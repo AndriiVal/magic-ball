@@ -20,18 +20,13 @@ window.onload = function() {
   canvas.width = W;
   canvas.height = H;
   var particles = [];
-  var mouse = {};
   //Lets create some particles now
   var particle_count = 100;
-  for (var i = 0; i < particle_count; i++) {
-    particles.push(new particle());
-  }
   canvas.addEventListener('mousedown', track_mouse, false);
   canvas.addEventListener('touch', track_mouse, false);
 
   function track_mouse(e) {
-    mouse.x = e.pageX;
-    mouse.y = e.pageY;
+	particles = [];
 
     for (var i = 0; i < particle_count; i++) {
       particles.push(new particle());
@@ -46,17 +41,11 @@ window.onload = function() {
       y: -2.5 + Math.random() * 5
     };
     //location = center of the screen
-    if (mouse.x && mouse.y) {
-      this.location = {
-        x: mouse.x,
-        y: mouse.y
-      };
-    } else {
-      this.location = {
-        x: W / 2,
-        y: H / 2
-      };
-    }
+    this.location = {
+      x: W / 2,
+      y: H / 2
+    };
+	
     this.color = randomColor()
 
     this.font = {
