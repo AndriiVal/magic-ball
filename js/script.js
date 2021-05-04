@@ -3,6 +3,12 @@ window.onload = function() {
 
   var canvas = document.querySelector("canvas");
   var ctx = canvas.getContext("2d");
+  //Make the canvas occupy the full page
+  var W = window.innerWidth;
+  var H = window.innerHeight;
+  canvas.width = W;
+  canvas.height = H;
+  var gradient = ctx.createRadialGradient(W/2,H/2,200,W/2,H/2,30);
   //Utilits
   function randomColor() {
     return '#' + Math.random().toString(16).slice(2, 8);
@@ -16,17 +22,11 @@ window.onload = function() {
   function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  //Make the canvas occupy the full page
-  var W = window.innerWidth,
-    H = window.innerHeight;
-  canvas.width = W;
-  canvas.height = H;
-  var gradient = ctx.createRadialGradient(W/2,H/2,200,W/2,H/2,30);
-  var particles = [];
   //Lets create some particles now
+  var particles = [];
   var particle_count = 100;
-  canvas.addEventListener('mousedown', run_effect, false);
-  canvas.addEventListener('touch', run_effect, false);
+  //canvas.addEventListener('mousedown', run_effect, false);
+  //canvas.addEventListener('touch', run_effect, false);
 
   function run_effect() {
 	  particles = [];
@@ -52,7 +52,7 @@ window.onload = function() {
     this.color = randomColor();
 
     this.font = {
-      size: randomInt(3, 15)
+      size: randomInt(3, 10)
     };
     
     this.word = randomWord();
@@ -60,7 +60,7 @@ window.onload = function() {
 
   function draw() {
     ctx.globalCompositeOperation = "source-over";
-    //Painting the canvas black
+    //Painting the canvas gradient
     gradient.addColorStop(0, "black");
     gradient.addColorStop(1, "blue");
     ctx.fillStyle = gradient;
@@ -92,8 +92,8 @@ window.onload = function() {
   setInterval(draw, 10);
 
   //Magic Ball__________________________________________________
-
-
+  
+       
 };
 
 // Big Word Array
