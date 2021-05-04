@@ -21,7 +21,7 @@ window.onload = function() {
     H = window.innerHeight;
   canvas.width = W;
   canvas.height = H;
-  var gradient = ctx.createRadialGradient(W/2,H/2,250,W/2,H/2,30);
+  var gradient = ctx.createRadialGradient(W/2,H/2,200,W/2,H/2,30);
   var particles = [];
   //Lets create some particles now
   var particle_count = 100;
