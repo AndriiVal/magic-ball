@@ -92,9 +92,12 @@ window.onload = function() {
   setInterval(draw, 10);
 
   //Magic Ball__________________________________________________
-  $("#8ball").click(function() {
+  $("#8ball-hole").hide();
+  $("#8ball, #8ball-hole").click(function() {
+    $("#8ball-hole").hide();
     run_effect();
-    $(this).effect( "shake", {times:5} );
+    $("#8ball").effect( "shake", {times:5} );
+    $("#8ball-hole").show(2000);
   });
        
 };
