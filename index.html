@@ -8,9 +8,13 @@
   </head>
   <body>
     <canvas class="canvas"></canvas>
-    <div class="ball"><img id="8ball" style="cursor: pointer;" src="img/ball.png" alt=""/></div>
-    <div class="ball-hole"><img id="8ball-hole" style="cursor: pointer;" src="img/ball-hole.png" alt=""/></div>
-    <div class="answer" id="8answer"></div>
+    <div class="wrapper">
+      <div class="content"><p>Задайте питання (на яке можна відповісти "так" або "ні") та клікніть по кулі</p></div>
+      <div class="ball"><img id="8ball" style="cursor: pointer;" src="img/ball.png" alt=""/></div>
+      <div class="ball-hole"><img id="8ball-hole" style="cursor: pointer;" src="img/ball-hole.png" alt=""/></div>
+      <div class="answer" id="8answer"></div>
+      <div class="footer"><p>Copyright © 2021 | Andrii Valchuk</p></div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"

@@ -2,6 +2,28 @@
 
 * {
   margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: blue;
+  font-family: "Lobster";
+  font-size: 1em;
+  text-align: center;
 }
 
 canvas {
@@ -12,6 +34,13 @@ canvas {
   position: fixed;
   z-index: -1;
   margin: 0;
+}
+
+.content {
+  color: blue;
+  font-family: "Lobster";
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .ball {
