@@ -51,12 +51,20 @@ canvas {
   left: 50%;
 }
 
+.ball img{
+  border-radius: 113px;
+}
+
 .ball-hole {
   margin: 0;
   transform: translate(-50%, -50%);
   position: absolute; 
   top: 50%; 
   left: 50%;
+}
+
+.ball-hole img{
+  border-radius: 88px;
 }
 
 .answer {
