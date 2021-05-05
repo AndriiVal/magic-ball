@@ -103,7 +103,14 @@ window.onload = function() {
     $("#8ball").effect( "shake", {times:5} );
     $("#8ball-hole, .answer").show(2000);
   });
-   
+  
+  $(".wrapper").click(function(e) {
+    var div = $("#magic")
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      $("#8ball-hole, .answer").hide();
+    }
+  });
+
   window.onresize = function (event) {
     location.reload();
   }

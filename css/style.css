@@ -53,6 +53,7 @@ canvas {
 
 .ball img{
   border-radius: 113px;
+  cursor: pointer;
 }
 
 .ball-hole {
@@ -65,6 +66,7 @@ canvas {
 
 .ball-hole img{
   border-radius: 88px;
+  cursor: pointer;
 }
 
 .answer {
@@ -78,4 +80,5 @@ canvas {
   font-family: "Lobster";
   font-size: 1.5em;
   text-align: center;
+  cursor: pointer;
 }
