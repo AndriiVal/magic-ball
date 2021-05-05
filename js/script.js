@@ -8,7 +8,7 @@ window.onload = function() {
   var H = window.innerHeight;
   canvas.width = W;
   canvas.height = H;
-  var gradient = ctx.createRadialGradient(W/2,H/2,200,W/2,H/2,30);
+  var gradient = ctx.createRadialGradient(W/2,H/2,220,W/2,H/2,30);
   //Utilits
   function randomColor() {
     return '#' + Math.random().toString(16).slice(2, 8);
@@ -92,12 +92,16 @@ window.onload = function() {
   setInterval(draw, 10);
 
   //Magic Ball__________________________________________________
-  $("#8ball-hole").hide();
-  $("#8ball, #8ball-hole").click(function() {
-    $("#8ball-hole").hide();
+  $("#8ball-hole, .answer").hide();
+  $('#8answer').html('');
+  $("#8ball, #8ball-hole, #8answer").click(function() {
+    $("#8ball-hole, .answer").hide();
+    $('#8answer').html('');
+    var answer = words[Math.floor(Math.random() * words.length)];
+    $('#8answer').append(answer);
     run_effect();
     $("#8ball").effect( "shake", {times:5} );
-    $("#8ball-hole").show(2000);
+    $("#8ball-hole, .answer").show(2000);
   });
        
 };
