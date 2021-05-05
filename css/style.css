@@ -52,7 +52,7 @@ canvas {
 }
 
 .ball img{
-  border-radius: 113px;
+  border-radius: 168px;
   cursor: pointer;
 }
 
@@ -81,4 +81,24 @@ canvas {
   font-size: 1.5em;
   text-align: center;
   cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+  body {
+    background-color: black;
+    background-image: radial-gradient(circle, blue 0%, black 70%);
+  }
+  .canvas{visibility: collapse;}
+  .ball img {
+    width: 280px;
+    height: 280px;
+    border-radius: 140px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ball-hole img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
 }
