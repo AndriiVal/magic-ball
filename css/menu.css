@@ -64,7 +64,7 @@
  height: 100%;
  background-image: radial-gradient(circle, blue 0%, black 100%);
  overflow-y: auto;
- right: -100%;
+ right: -120%;
  transition: 0.5s;
 }
 
