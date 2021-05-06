@@ -100,8 +100,8 @@ window.onload = function() {
     var answer = words[Math.floor(Math.random() * words.length)];
     $('#8answer').append(answer);
     run_effect();
-    $("#8ball").effect("shake", {times:3}, 1000);
-    $("#8ball-hole, .answer").show(3000);
+    $("#8ball").effect( "shake", {times:5} );
+    $("#8ball-hole, .answer").show(2000);
   });
   
   $(".wrapper").click(function(e) {
