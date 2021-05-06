@@ -10,6 +10,7 @@ body {
 }
 
 body {
+  font-family: "Lobster";
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -44,8 +45,11 @@ canvas {
 .content {
   color: blue;
   font-family: "Lobster";
-  font-size: 1.5em;
-  text-align: center;
+  padding: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .ball {
@@ -89,6 +93,12 @@ canvas {
 }
 
 @media screen and (max-width:800px) {
+  .content {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: none;
+  }
   .ball img {
     width: 280px;
     height: 280px;
